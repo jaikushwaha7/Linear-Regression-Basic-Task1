@@ -1,7 +1,7 @@
 # Linear-Regression-Basic-Task1
 **Basic Understanding of Linear Regression 	:man_teacher:
 
-## What is Linear Regression <h2> tag
+## What is Linear Regression <h2> ![alt text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/Image%201.png)
 Simplest of techniques that can be used for a supervised learning algorithm in regression problems is Linear regression. It gives the simplest of understanding of the output.
 \nRegression is a technique for finding the relationship between a response variable and one or more explanatory variables.
 1. Simple Linear Regression: Predict Y using only one independent variable — Estimated y = b0 + b1 * x1
@@ -24,7 +24,7 @@ Coefficients:
       2.484        9.776  
 Scores = Intercept + Hours* Coefficient
 Scores = 2.484 + Hours * 9.776
-
+![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization.gif)
 ## The simple linear regression equation tells us that the predicted scores for the Hours studied will increase by 9.776  time Scores for every one percent increase in the Hours of study.
 Now if more terms are added to the models then comes Multiple linear regression. 
 1. So again find the best fit line using R square. 
