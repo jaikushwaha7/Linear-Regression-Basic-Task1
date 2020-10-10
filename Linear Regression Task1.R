@@ -1,27 +1,39 @@
 #Simple Linear Regression
-setwd("G:/BACP/ADVSTAT")
-mydata=read.csv("Hotel1.csv",header=TRUE)
+setwd("D:/Study/Internsala/Spark Foudation Grip/Task 1")
+mydata=read.csv("Task1Data_Study_Hours_score.csv",header=TRUE)
 attach(mydata)
 mydata
-plot(PercentOccupancy,Revenueindollar1000, col="Red",
-     abline(lm(Revenueindollar1000~PercentOccupancy),col="Blue"))
-cor(Revenueindollar1000,PercentOccupancy)
-SLM=lm(Revenueindollar1000~PercentOccupancy)
+plot(Hours,Scores, col="Red",
+     abline(lm(Scores~Hours),col="Blue"))
+x = cor(Hours,Scores)
+x
+SLM=lm(Scores~Hours)
 SLM
 summary(SLM)
-confint(SLM, "PercentOccupancy")
-confint(SLM, "PercentOccupancy",level=0.99)
+confint(SLM, "Hours")
+confint(SLM, "Hours",level=0.99)
 anova(SLM)
-write.csv(anova(SLM),file="G:/BACP/reg4.csv") 
+write.csv(anova(SLM),file="Task1_reg4_anova.csv") 
 Prediction=predict(SLM)
-Actual=Revenueindollar1000
+
+Actual=Scores
 BackTrack=data.frame(Actual,Prediction)
 BackTrack
 library(lattice)
-plot(Actual,col="Red",xlab="Data Point")
-lines(Actual,col="Red")
-plot(Prediction,col="Blue",xlab="Data Point")
+plot(Actual,col="Red",xlab="Hours of Study",ylab = 'Scores')
+lines(Actual,col="Red", xlab = 'Scores')
+plot(Prediction,col="Blue",xlab='Hours of Study', ylab = 'Predicted Scores', title = 'Actual vs Predicted')
 lines(Prediction,col="Blue")
-newdata=data.frame(PercentOccupancy=85)
+newdata=data.frame(Hours=85)
 predict(SLM,newdata,interval="confidence") 
- 
+
+library(ggplot2)
+
+# this is the predicted line of multiple linear regression
+Prediction_df=data.frame(predict(SLM))
+Prediction_df
+ggplot(data = mydata, aes(x = Hours, y = Scores)) + 
+  geom_point(color='blue') +
+  geom_line(color='red',data = Prediction_df, aes(x=Hours, y=predict.SLM.))
+
+
