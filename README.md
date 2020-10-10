@@ -12,6 +12,7 @@ Simplest of techniques that can be used for a supervised learning algorithm in r
 Formula for Linear Regression
 lm(formula = Scores ~ Hours)
 ![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization2.gif)
+
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
 (Intercept)   2.4837     2.5317   0.981    0.337    
