@@ -11,7 +11,7 @@ Simplest of techniques that can be used for a supervised learning algorithm in r
 **In the Example we have to find whether hours :timer_clock: of study impact the scores :abacus: on an individual given the data.
 Formula for Linear Regression
 lm(formula = Scores ~ Hours)
-![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization.gif)
+![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization2.gif)
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
 (Intercept)   2.4837     2.5317   0.981    0.337    
@@ -24,7 +24,7 @@ Coefficients:
       2.484        9.776  
 Scores = Intercept + Hours* Coefficient
 Scores = 2.484 + Hours * 9.776
-![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization2.gif)
+![alt-text](https://github.com/jaikushwaha7/Linear-Regression-Basic-Task1/blob/main/LR_Visualization.gif)
 ## The simple linear regression equation tells us that the predicted scores for the Hours studied will increase by 9.776  time Scores for every one percent increase in the Hours of study.
 Now if more terms are added to the models then comes Multiple linear regression. 
 1. So again find the best fit line using R square. 
